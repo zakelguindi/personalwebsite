@@ -1,6 +1,6 @@
 const getProjects = async() => {
   try {
-    return (await fetch("api/projects/")).json(); 
+    return (await fetch("https://personalwebsite-q2j9.onrender.com/api/projects/")).json(); 
   } catch(error) {
     console.log(error); 
   }
@@ -93,7 +93,7 @@ const editProjectForm = (proj) => {
 
 const deleteProject = async(project) => {
   console.log(project._id); 
-  let response = await fetch(`/api/projects/${project._id}`, {
+  let response = await fetch(`https://personalwebsite-q2j9.onrender.com//api/projects/${project._id}`, {
     method: "DELETE", 
     headers: {
       "Content-Type":"application/json;charset=utf-8"
@@ -130,14 +130,14 @@ const addEditProj = async(e) => {
     formData.delete("_id"); 
 
     console.log(...formData); 
-    response = await fetch("/api/projects", {
+    response = await fetch("https://personalwebsite-q2j9.onrender.com/api/projects", {
       method: "POST", 
       body: formData
     });
   } else {
     console.log(...formData); 
     // I get a bug here saying it's undefined 
-    response = await fetch(`/api/projects/${form._id.value}`, {
+    response = await fetch(`https://personalwebsite-q2j9.onrender.com/api/projects/${form._id.value}`, {
       method: "PUT", 
       body: formData
     });

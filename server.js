@@ -10,6 +10,14 @@ const mongoose = require("mongoose");
 
 const upload = multer({ dest:__dirname + "/public/images"});
 
+/**
+ * for render: 
+ * use render only for /api/projects 
+ * copy render link to every "/api/projects" that I have in script. server stays same except for one
+ * take everything out of public folder and move it to github.io. 
+ * 
+ */
+
 mongoose
   .connect(
     "mongodb+srv://zakelguindi:4weNIKaXtsZo1kFI@cluster0.9jv0xxn.mongodb.net/"
@@ -17,9 +25,10 @@ mongoose
   .then(() => console.log("Connected to mongodb..."))
   .catch((err) => console.error("could not connect to mongodb...", err));
 
-app.get("/", (req, res) => {
-  res.sendFile(__dirname + "/adminpage.html"); 
-});
+  // get rid of this method 
+// app.get("/", (req, res) => {
+//   res.sendFile(__dirname + "/adminpage.html"); 
+// });
 
 const projectSchema = new mongoose.Schema({
   language: String, 
