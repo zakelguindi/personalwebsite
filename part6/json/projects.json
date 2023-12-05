@@ -1,0 +1,35 @@
+[
+  {
+    "language":"Java",
+    "name":"CSCE 247 Java Camp Application", 
+    "date": "11/1/2022",
+    "githubLink":"https://github.com/dbkaiser25/CampButterflies",
+    "description":"I was put in a group and assigned to make a website based on a client's list of specs. The client in this scenario was a camp company who wanted a website they could store all of their camp's user and registration data on, as well as generate a schedule for the camp groups. This was my largest java project I've completed. I worked on all of the JSON files, the Data Reader/Writer, and a lot of the backend implementation.",
+    "mediaLink":"",
+    "favorite": true
+  }, {
+    "language":"Java", 
+    "name":"CSCE 247- Strategy Design Pattern", 
+    "date":"9/1/2022",
+    "githubLink": "https://github.com/zakelguindi/design_patterns/tree/main/strategy",
+    "description":"Exercizing the strategy design pattern through this exercise here. The CrazyWorld.java file is the driver, running it will run you thought the various testing scenarios. ",
+    "mediaLink":"https://www.youtube.com/embed/UULOHq6dxz4",
+    "favorite":false
+  }, {
+    "language": "C++", 
+    "name":"Locker Doors Algorithm", 
+    "date":"08/31/2023", 
+    "githubLink": "https://github.com/zakelguindi/zakelguindi.github.io/tree/main/csce350/hw1", 
+    "description": "I was tasked to write a c++ algorithm that would solve the following puzzle: There are n lockers in a hallway, numbered sequentially 1 through n. Initially, all the locker doors are closed. You make r passes by the lockers, each time starting with locker #1. On the i-th pass, i=1, 2, ..., r, you toggle the door of every other i-th locker. If the door is closed, you open it, if it's opened, you close it. After the last pass display: \n1) The locker door # and their status (opened/closed) \n2) How many locker doors are open?",
+    "mediaLink": "", 
+    "favorite":false
+  }, {
+    "language":"Front-End", 
+    "name":"CSCE 242 Assignments Website", 
+    "date":"09/01/2023", 
+    "githubLink":"https://github.com/zakelguindi/zakelguindi.github.io/tree/main",
+    "description": "In the fall semester of 2023, I enrolled in a course that would teach me the fundamentals of front-end development. As part of this class, I created a website that would store all of my assignments from this class. One aspect of this that I enjoy is that you can see the progression of my skills in front-end development as you go through the assignments. Unlike some of my other projects, you can view and interact with these projects, as well as being able to view the code.",
+    "mediaLink": "https://zakelguindi.github.io/",
+    "favorite":true
+  }
+]

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Page</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="styles.css">
+  <script src="./adminloginscript.js"></script>
+</head>
+
+<body>
+  <!-- <p>
+    For this page: 
+    admin should be able to 1) add projects 2) edit projects 3) remove projects 4) go back to every other page
+  </p> -->
+  <div id="header">
+    <h1><center>Welcome, Zak Elguindi</center></h1>
+  </div>
+  <div id="admin-functionality-div">
+    <button id="add-project-button">Add Project- Click Here</button> <br>
+    <form id="add-project" class="hidden">
+      <label for="add-proj-lang" required>Language</label>
+      <input type="text" id="add-proj-lang"/> <br>
+      <label for="add-proj-name" required>Name</label>
+      <input type="text" id="add-proj-name"/> <br>
+      <label for="add-proj-link" required>Code Link</label>
+      <input type="url" id="add-proj-link"/> <br>
+      <label for="add-proj-description">Description</label>
+      <input type="text" id="add-proj-description"/> <br>
+      <label for="add-proj-output">Project Link</label>
+      <input type="url" id="add-proj-output"/> <br>
+      <p><button type="submit">Submit</button></p>
+    </form>
+    <section id="add-results" class="hidden">
+      <h4>Inputted Information</h4>
+      <p>
+        The project has been added to the system. 
+      </p>
+    </section>
+    <button id="remove-project-button">Remove Project</button> <br>
+    <form id="remove-project" class="hidden">
+      <label for="search-project" required>Search By Name:</label>
+      <input type="text" id="search-project"/>
+      <p><button type="submit">Submit</button></p>
+    </form>
+    <section id="remove-results" class="hidden">
+      <h4>Inputted Information</h4>
+      <p>
+        The project has been added to the system. 
+      </p>
+    </section>
+    <button id="edit-project-button">Edit Project</button>
+    <form id="edit-project" class="hidden">
+      <label for="edit-proj-lang" required>Language</label>
+      <input type="text" id="edit-proj-lang"/> <br>
+      <label for="edit-proj-name" required>Name</label>
+      <input type="url" id="edit-proj-name"/> <br>
+      <label for="edit-proj-link" required>Code Link</label>
+      <input type="text" id="edit-proj-link"/> <br>
+      <label for="edit-proj-description">Description</label>
+      <input type="text" id="edit-proj-description"/> <br>
+      <label for="edit-proj-output">Project Link</label>
+      <input type="url" id="edit-proj-output"/> <br>
+      <p><button type="submit">Submit</button></p>
+    </form>
+    <section id="edit-results" class="hidden">
+      <h4>Inputted Information</h4>
+      <p>
+        The project has been added to the system. 
+      </p>
+    </section>
+
+  </div>
+
+  <div id="home-about-me">
+    <ul>
+      <li>About Me</li>
+      <div id="aboutme-content" class="hidden"></div>
+      <li>Work Experiences</li>
+      <div id="workexperience-content" class="hidden"></div>
+      <li>Favorite Projects</li>
+      <div id="favoteprojects-content" class="hidden"></div>
+    </ul>
+  </div>
+</div>
+<div id="sidebar-content">
+  <div id="home-nav-bar">
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="adminlogin.html">Admin Login</a></li>
+    </ul>
+  </div>
+  <div id="projects-nav">
+    <ul>
+      <li><a href="favorites.html">Favorites</a></li>
+      <li><a href="javaprojects.html">Java Projects</a></li>
+      <li><a href="cppprojects.html">C++ Projects</a></li>
+      <li><a href="frontendprojects.html">Front-End Projects</a></li>
+    </ul>
+  </div>
+</div>
+</body>
+
+</html>

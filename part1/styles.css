@@ -1,0 +1,169 @@
+
+:root {
+  --background: #0A1828; 
+  --textcolor: #BFA181; 
+}
+
+body {
+  /* background-color: #1d1d1d;
+  color: #2272FF; */
+  background-color: var(--background);
+  color: var(--textcolor);
+  font-family: 'Lato', sans-serif; 
+  /* display: flex;  */
+}
+
+#home-content-main {
+  position: absolute; 
+  /* top: 5%; */
+  left: 5%; 
+  width: 70%; 
+  padding: 10px;
+  margin: auto; 
+}
+
+#personal-introduction {
+  position: absolute; 
+  top: 50%; 
+}
+
+#home-about-me {
+  position: absolute; 
+  top: 1500%; 
+}
+
+#home-about-me li {
+  padding: 10px;
+}
+
+#sidebar-content {
+  position: absolute; 
+  right: 5%; 
+  width: 30%; 
+  padding: 10px; 
+  margin: auto; 
+}
+
+#projects-nav {
+  position: absolute; 
+  top: 1000%; 
+  right: 0%; 
+}
+
+#projects-nav li {
+  margin: auto; 
+  padding: 10px 10px; 
+}
+
+#home-nav-bar {
+  position: absolute; 
+  top: 0px; 
+  right: 0px; 
+}
+
+#home-nav-bar ul {
+  display: flex; 
+  padding: 5px; 
+}
+
+a {
+  color: var(--textcolor); 
+  text-decoration: none;
+}
+
+li a{
+  color: var(--textcolor);
+  text-decoration: none;
+}
+li {
+  padding: 0 5px; 
+  list-style-type: none; 
+}
+
+footer {
+  position: absolute; 
+  left: 5%; 
+  bottom: 5%; 
+}
+
+footer ul {
+  display: flex; 
+  padding: 5px; 
+}
+
+/* contact me page */
+#contact-me-content {
+  position: absolute; 
+  top: 25%; 
+  left: 10%; 
+  /* display:list-item; */
+}
+
+#contact-me-content li, 
+#login-section label, 
+#login-section input {
+  margin: 10px; 
+  padding: 10px;
+}
+
+/* display */
+.hidden {
+  display: none; 
+}
+
+/* favorites page */
+#header {
+  /* display: flex;  */
+  width: 70%;
+  margin: auto; 
+  position: absolute; 
+  top: 2.5%; 
+  left: 5%; 
+}
+
+#project-main-div {
+  width: 70%; 
+  position:absolute; 
+  top: 20%; 
+  left: 5%; 
+}
+
+/* admin login section */
+#login-section {
+  position: absolute; 
+  top: 30%; 
+  left: 30%; 
+}
+
+/* hover on link */
+a:hover {
+  position: relative; 
+  text-align: center;
+  font-size: 32px; 
+}
+
+#enter-button {
+  position: absolute; 
+  left: 80%;
+}
+
+#enter-button a {
+  font-size: 16px; 
+}
+
+/* underline view-code links */
+#project-main-div a{
+  text-decoration: underline;
+  padding: 5px; 
+}
+
+#admin-functionality-div {
+  position: absolute; 
+  left: 10%; 
+  top: 20%; 
+}
+
+#admin-functionality-div button {
+  margin: 10px; 
+  padding: 10px; 
+}
