@@ -15,6 +15,7 @@ TODO:
   --background: #0A1828; 
   --textcolor: #BFA181; 
   --primary: #2196f3;
+  --tertiary: #384e1d;
 
 }
 
@@ -304,10 +305,11 @@ footer {
 
 /* projects.js stuff */
 .dialog {
-  background-color: rgb(193, 53, 193); 
+  /* background-color: rgb(193, 53, 193);  */
+  background-color: var(--tertiary);
   margin: auto; 
   padding: 15px; 
-  border: 1px solid blue; 
+  border: 1px solid var(--textcolor); 
   width: 50%;
   /* opacity: 1;   */
 }
@@ -385,7 +387,8 @@ footer {
 
 /* hover on link */
 a:hover {
-  color:rgb(193, 53, 193);
+  /* color:rgb(193, 53, 193); */
+  color: var(--tertiary); 
 }
 
 #enter-button {

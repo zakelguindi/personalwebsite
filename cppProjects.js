@@ -50,13 +50,13 @@ const getProjectItem = (project) => {
   a.append(description); 
 
   const ghLink = document.createElement("a"); 
-  ghLink.href = project.githubLink; 
+  ghLink.href = project.codeLink; 
   ghLink.innerText = `${project.name} Code`;
   a.append(ghLink); 
 
-  if(project.mediaLink != "") {
+  if(project.projectLink != "") {
     const mediaLink = document.createElement("a"); 
-    mediaLink.href = project.mediaLink; 
+    mediaLink.href = project.projectLink; 
     mediaLink.innerHTML = project.name + " Media Link";
     a.append(mediaLink); 
   }
