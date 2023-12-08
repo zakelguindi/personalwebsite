@@ -33,6 +33,11 @@ body {
   padding: 5px; 
 }
 
+.project a {
+  text-decoration: underline;
+  font-size: 16px;
+}
+
 /* input label animation */
 .input-group {
   font-size: 1.25rem;
@@ -276,15 +281,21 @@ footer {
   margin: auto; 
   padding: 15px; 
   border: 1px solid blue; 
-  width: 50%; 
+  width: 50%;
+  /* opacity: 1;   */
 }
+
+/* .transparent {
+  opacity: 0; 
+} */
 
 /* close button */
 .close {
   color: #aaaaaa; 
   float: right; 
   font-size: 30px;
-
+  font-weight: bold;
+  padding: 0px 5px;
 }
 
 /* contact me page */
@@ -343,9 +354,7 @@ footer {
 
 /* hover on link */
 a:hover {
-  position: relative; 
-  text-align: center;
-  font-size: 32px; 
+  color:rgb(193, 53, 193);
 }
 
 #enter-button {
@@ -374,6 +383,11 @@ a:hover {
 #admin-functionality-div button {
   margin: 10px; 
   padding: 10px; 
+}
+
+.proj-content a {
+  text-decoration: none;
+  font-size: 16px; 
 }
 
 @media only screen and (max-width: 760px) {

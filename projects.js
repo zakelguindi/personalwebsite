@@ -13,6 +13,7 @@ const showProjects = async() => {
   projects.forEach((project) => {
     const section = document.createElement("section"); 
     section.classList.add("project"); 
+    section.classList.add("proj-content"); 
     projectsDiv.append(section); 
 
     const link = document.createElement("a"); 
@@ -32,9 +33,15 @@ const showProjects = async() => {
 
 };
 
+const toggleAddProj = () => {
+  document.getElementById("add-edit-proj").classList.toggle(".hidden"); 
+  console.log("Here"); 
+}
+
 // NOTE TO SELF- need to change links to actual links instead of strings. 
 const displayDetails = (project) => {
   const details = document.getElementById("projects-details"); 
+  details.classList.add("proj-content"); 
   details.innerHTML = ""; 
 
   const name = document.createElement("h3"); 
@@ -51,20 +58,26 @@ const displayDetails = (project) => {
   details.append(editLink); 
   editLink.id = "edit-link"; 
 
+  const date = document.createElement("h5"); ;
+  date.innerHTML = project.date; 
+  details.append(date); 
+
   const language = document.createElement("h5"); 
   language.innerHTML = project.language; 
   details.append(language); 
 
-  const codeLink = document.createElement("p"); 
-  codeLink.innerHTML = project.codeLink; 
+  const codeLink = document.createElement("a"); 
+  codeLink.href = project.codeLink; 
+  codeLink.innerHTML = "Code Link"; 
   details.append(codeLink); 
 
   const description = document.createElement("p"); 
   description.innerHTML = project.description; 
   details.append(description); 
 
-  const projectLink = document.createElement("p"); 
-  projectLink.innerHTML = project.projectLink; 
+  const projectLink = document.createElement("a"); 
+  projectLink.href = project.projectLink; 
+  projectLink.innerHTML = "Demo Link"; 
   details.append(projectLink); 
 
   editLink.onclick = (e) => {
@@ -85,6 +98,7 @@ const editProjectForm = (proj) => {
   const form = document.getElementById("add-edit-proj-form"); 
   form._id.value = proj._id;
   form.name.value = proj.name; 
+  form.date.value = proj.date; 
   form.language.value = proj.language; 
   form.codeLink.value = proj.codeLink; 
   form.description.value = proj.description; 
@@ -182,5 +196,6 @@ window.onload = () => {
 
   document.getElementById("add-edit-proj-form").onsubmit = addEditProj; 
   document.getElementById("add-link").onclick = showHideAdd; 
+  document.getElementById("add-project-button").onclick = toggleAddProj; 
   
 }

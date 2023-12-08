@@ -11,6 +11,27 @@ const mongoose = require("mongoose");
 const upload = multer({ dest:__dirname + "/public/images"});
 
 /**
+ * things left to do: 
+ * 1: about me page, work experiences. maybe make something personal too (things I like) 
+ *    maybe an about me (personal) and my experience as a dev (professional)
+ * 
+ * ADD SOMETHING FOR FAVORITES 
+ * 
+ * 2: embedding links for demos 
+ * 3: uploading physical projects 
+ * 4: password validation
+ * 5: making it look pretty. 
+ */
+
+/**
+ * (5) making it look pretty: 
+ * 1. menu hover effect 
+ * 2. drop-down menu 
+ * 3. optimize for mobile. 
+ */
+
+
+/**
  * for render: 
  * use render only for /api/projects 
  * copy render link to every "/api/projects" that I have in script. server stays same except for one
@@ -33,6 +54,7 @@ mongoose
 const projectSchema = new mongoose.Schema({
   language: String, 
   name: String, 
+  date: String, 
   codeLink: String, 
   description: String, 
   projectLink: String, 
@@ -60,6 +82,7 @@ app.post("/api/projects", upload.single("img"), (req, res) => {
   const project = new Proj ({
     language: req.body.language, 
     name: req.body.name, 
+    date: req.body.date, 
     codeLink: req.body.codeLink, 
     description: req.body.description, 
     projectLink: req.body.projectLink,
@@ -89,6 +112,7 @@ const updateProject = async(req, res) => {
   let fieldsToUpdate = {
     language: req.body.language,
     name: req.body.name, 
+    date: req.body.date, 
     codeLink: req.body.codeLink, 
     description: req.body.description, 
     projectLink: req.body.projectLink, 
@@ -117,6 +141,7 @@ const validateProject = (project) => {
     _id:Joi.allow(""), 
     language: Joi.string().min(2), 
     name: Joi.string().min(2), 
+    date: Joi.string().min(2), 
     codeLink: Joi.string(), 
     description: Joi.string(), 
     projectLink: Joi.string(),
@@ -126,6 +151,6 @@ const validateProject = (project) => {
 }
 
 
-app.listen(3002, () => {
+app.listen(3011, () => {
   console.log("listening"); 
 })
