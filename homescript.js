@@ -11,4 +11,4 @@ const showWorkExperiences = () => {
 window.onload = () => {
   document.getElementById("about-me-link").onclick = showAboutMe; 
   document.getElementById("work-exp-link").onclick = showWorkExperiences; 
-}
+} 

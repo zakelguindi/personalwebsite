@@ -134,7 +134,7 @@ const deleteProject = async(project) => {
   console.log(response.status); 
 
   if(response.status != 200) {
-    console.log("delete error"); 
+    console.log("delete error");  
     return; 
   }
 

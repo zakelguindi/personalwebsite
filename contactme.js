@@ -35,4 +35,4 @@ const getEmailResult = async (e) => {
   }
 };
 
-document.getElementById("contact-me-content").onsubmit = showEmailResult; 
+document.getElementById("contact-me-content").onsubmit = showEmailResult;  

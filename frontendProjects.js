@@ -44,7 +44,7 @@ const getProjectItem = (project) => {
 
   const description = document.createElement("p");
   description.innerHTML = "<b><u>Description:</u></b>  "+ project.description; 
-  a.append(description); 
+  a.append(description);  
 
   const ghLink = document.createElement("a"); 
   ghLink.href = project.githubLink; 

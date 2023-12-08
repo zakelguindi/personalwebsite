@@ -138,7 +138,7 @@ const removeProject = async(res, id) => {
 }
 
 const validateProject = (project) => {
-  const schema = Joi.object({
+  const schema = Joi.object({ 
     _id:Joi.allow(""), 
     language: Joi.string().min(2), 
     name: Joi.string().min(2), 

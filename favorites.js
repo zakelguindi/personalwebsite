@@ -40,7 +40,7 @@ const getProjectItem = (project) => {
 
   const date = document.createElement("h4"); 
   date.innerHTML = project.date; 
-  a.append(date); 
+  a.append(date);  
 
   const description = document.createElement("p");
   description.innerHTML = "<b><u>Description:</u></b>  "+ project.description; 

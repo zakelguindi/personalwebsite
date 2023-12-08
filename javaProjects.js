@@ -57,7 +57,7 @@ const getProjectItem = (project) => {
   a.append(favorite);
 
   return projectsSection;
-
+ 
 };
 
 window.onload = () => showProjects(); 

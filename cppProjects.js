@@ -40,7 +40,7 @@ const getProjectItem = (project) => {
   const language = document.createElement("h4");
   language.innerText = project.language; 
   a.append(language); 
-
+ 
   const date = document.createElement("h4"); 
   date.innerHTML = project.date; 
   a.append(date); 
