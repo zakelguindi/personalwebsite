@@ -80,6 +80,22 @@ const displayDetails = (project) => {
   projectLink.innerHTML = "Demo Link"; 
   details.append(projectLink); 
 
+  const iframe = document.createElement("iframe"); 
+  iframe.setAttribute("style", "width:560;height:315;");
+  iframe.src = encodeURI(project.projectLink); 
+  iframe.title = "Youtube video player;"; 
+  iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;";
+  // iframe.contentWindow.document.open();
+  // iframe.contentWindow.document.write(project.projectLink); 
+  // iframe.contentWindow.document.close(); 
+
+  details.append(iframe); 
+
+
+  const favorite = document.createElement("p"); 
+  favorite.innerHTML = "Favorite: "+ project.favorite; 
+  details.append(favorite); 
+
   editLink.onclick = (e) => {
     e.preventDefault(); 
     document.querySelector(".dialog").classList.remove("transparent"); 

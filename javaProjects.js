@@ -50,17 +50,18 @@ const getProjectItem = (project) => {
   ghLink.innerText = `${project.name} Code`;
   a.append(ghLink); 
 
-  if(project.mediaLink != "") {
-    const mediaLink = document.createElement("a"); 
-    mediaLink.href = project.mediaLink; 
-    mediaLink.innerHTML = project.name + " Media Link";
-    a.append(mediaLink); 
+  if(project.projectLink != "") {
+    const iframe = document.createElement("iframe"); 
+    iframe.setAttribute("style", "width:560;height:315;");
+    iframe.src = encodeURI(project.projectLink); 
+    iframe.title = "Youtube video player;"; 
+    iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;";
+    a.append(iframe); 
   }
-
-
 
   const favorite = document.createElement("p"); 
   favorite.innerHTML = project.favorite; 
+  a.append(favorite);
 
   return projectsSection;
 

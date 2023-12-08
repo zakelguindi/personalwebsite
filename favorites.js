@@ -2,12 +2,10 @@
 
 const getProjects = async () => {
   // const url = "https://github.com/zakelguindi/zakelguindi.github.io/blob/main/csce242/zakelguindiprojects/part5/json/projects.json";
-  const url = "https://raw.githubusercontent.com/zakelguindi/zakelguindi.github.io/main/csce242/zakelguindiprojects/part5/json/projects.json";
+  // const url = "https://raw.githubusercontent.com/zakelguindi/zakelguindi.github.io/main/csce242/zakelguindiprojects/part5/json/projects.json";
 
   try {
-    const link = await fetch(url); 
-    console.log(link); 
-    return await link.json(); 
+    return (await fetch("https://personalwebsite-q2j9.onrender.com/api/projects/")).json();  
   } catch(error) {
     console.log(error); 
   }
@@ -18,7 +16,7 @@ const showProjects = async () => {
   let projectsSection = document.getElementById("project-main-div");
 
   projects.forEach((project) => {
-    if(project.favorite == true) {
+    if(project.favorite == "on") {
       //seeing if it's a favorite project 
       projectsSection.append(getProjectItem(project))
     }
