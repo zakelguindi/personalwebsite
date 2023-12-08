@@ -80,16 +80,16 @@ const displayDetails = (project) => {
   projectLink.innerHTML = "Demo Link"; 
   details.append(projectLink); 
 
-  const iframe = document.createElement("iframe"); 
-  iframe.setAttribute("style", "width:560;height:315;");
-  iframe.src = encodeURI(project.projectLink); 
-  iframe.title = "Youtube video player;"; 
-  iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;";
-  // iframe.contentWindow.document.open();
-  // iframe.contentWindow.document.write(project.projectLink); 
-  // iframe.contentWindow.document.close(); 
+  // const iframe = document.createElement("iframe"); 
+  // iframe.setAttribute("style", "width:560;height:315;");
+  // iframe.src = encodeURI(project.projectLink); 
+  // iframe.title = "Youtube video player;"; 
+  // iframe.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;";
+  // // iframe.contentWindow.document.open();
+  // // iframe.contentWindow.document.write(project.projectLink); 
+  // // iframe.contentWindow.document.close(); 
 
-  details.append(iframe); 
+  // details.append(iframe); 
 
 
   const favorite = document.createElement("p"); 
@@ -124,7 +124,7 @@ const editProjectForm = (proj) => {
 
 const deleteProject = async(project) => {
   console.log(project._id); 
-  let response = await fetch(`https://personalwebsite-q2j9.onrender.com//api/projects/${project._id}`, {
+  let response = await fetch(`https://personalwebsite-q2j9.onrender.com/api/projects/${project._id}`, {
     method: "DELETE", 
     headers: {
       "Content-Type":"application/json;charset=utf-8"

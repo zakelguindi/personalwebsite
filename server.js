@@ -14,14 +14,8 @@ const upload = multer({ dest:__dirname + "/public/images"});
 
 /**
  * things left to do: 
- * 1: about me page, work experiences. maybe make something personal too (things I like) --DONE
- *    maybe an about me (personal) and my experience as a dev (professional)
- * 
- * ADD SOMETHING FOR FAVORITES --DONE
- * 
- * 2: embedding links for demos 
+
  * 3: uploading physical projects 
- * 4: password validation
  * 5: making it look pretty. 
  */
 
@@ -129,6 +123,8 @@ const updateProject = async(req, res) => {
   res.send(project); 
 };
 
+
+//delete works
 //deleting project 
 app.delete("/api/projects/:id", upload.single("img"), (req, res) => {
   removeProject(res, req.params.id); 
