@@ -58,6 +58,7 @@ const projectSchema = new mongoose.Schema({
   codeLink: String, 
   description: String, 
   projectLink: String, 
+  favorite: Array, 
 });
 
 const Proj = mongoose.model("Project", projectSchema); 
@@ -86,6 +87,7 @@ app.post("/api/projects", upload.single("img"), (req, res) => {
     codeLink: req.body.codeLink, 
     description: req.body.description, 
     projectLink: req.body.projectLink,
+    favorite: req.body.favorite, 
   });
 
   createProject(project, res); 
@@ -116,6 +118,7 @@ const updateProject = async(req, res) => {
     codeLink: req.body.codeLink, 
     description: req.body.description, 
     projectLink: req.body.projectLink, 
+    favorite: req.body.favorite
   };
 
   const result = await Proj.updateOne({_id: req.params.id}, fieldsToUpdate); 
@@ -145,6 +148,7 @@ const validateProject = (project) => {
     codeLink: Joi.string(), 
     description: Joi.string(), 
     projectLink: Joi.string(),
+    favorite: Joi.allow(), 
   });
 
   return schema.validate(project);

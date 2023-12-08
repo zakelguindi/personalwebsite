@@ -250,6 +250,19 @@ li {
   list-style-type: none; 
 }
 
+.columns {
+  display: flex; 
+  flex-wrap: wrap;
+}
+
+#displayProj {
+  width: 80%; 
+}
+
+#showingprojects, #projects-details-column {
+  padding: 10px; 
+}
+
 
 footer ul {
   display: flex; 
@@ -351,6 +364,10 @@ footer {
   display: flex; 
   
 }
+
+/* #add-edit-proj {
+  width: 70%; 
+} */
 
 /* hover on link */
 a:hover {

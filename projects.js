@@ -45,7 +45,7 @@ const displayDetails = (project) => {
   details.innerHTML = ""; 
 
   const name = document.createElement("h3"); 
-  name.innerHTML = project.name; 
+  name.innerHTML = "Name: "+project.name; 
   details.append(name); 
 
   const deleteLink = document.createElement("a"); 
@@ -63,7 +63,7 @@ const displayDetails = (project) => {
   details.append(date); 
 
   const language = document.createElement("h5"); 
-  language.innerHTML = project.language; 
+  language.innerHTML = "Language: "+ project.language; 
   details.append(language); 
 
   const codeLink = document.createElement("a"); 
@@ -103,6 +103,7 @@ const editProjectForm = (proj) => {
   form.codeLink.value = proj.codeLink; 
   form.description.value = proj.description; 
   form.projectLink.value = proj.projectLink; 
+  form.favorite.value = proj.favorite; 
 };
 
 const deleteProject = async(project) => {
@@ -196,6 +197,6 @@ window.onload = () => {
 
   document.getElementById("add-edit-proj-form").onsubmit = addEditProj; 
   document.getElementById("add-link").onclick = showHideAdd; 
-  document.getElementById("add-project-button").onclick = toggleAddProj; 
+  // document.getElementById("add-project-button").onclick = toggleAddProj; 
   
 }
