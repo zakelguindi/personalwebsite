@@ -57,9 +57,9 @@ const getProjectItem = (project) => {
     a.append(mediaLink); 
   }
 
-  const favorite = document.createElement("p"); 
-  favorite.innerHTML = project.favorite; 
-  a.append(favorite);
+  // const favorite = document.createElement("p"); 
+  // favorite.innerHTML = project.favorite; 
+  // a.append(favorite);
 
   return projectsSection;
  
